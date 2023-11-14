@@ -40,12 +40,6 @@ import static com.codeborne.selenide.Selenide.*;
 
 
 
-            $("#subjectsInput").setValue("English").pressEnter();
-            $("[for='hobbies-checkbox-1']").click();
-            $("#currentAddress").setValue("g.Maxachkola ul. rambler d.11. kv.14");
-            $("[id=react-select-3-input]").setValue("NCR").pressEnter();
-            $("[id=react-select-4-input]").setValue("Noida").pressEnter();
-
             $("#submit").pressEnter();
 
         }
