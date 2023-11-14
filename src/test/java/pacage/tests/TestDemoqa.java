@@ -1,10 +1,7 @@
 package pacage.tests;
 
 import org.junit.jupiter.api.Test;
-import pacage.TestDemoqaPageObjects;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 

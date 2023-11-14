@@ -1,8 +1,6 @@
 package pacage.companents;
 
 
-import pacage.TestDemoqaPageObjects;
-
 import static com.codeborne.selenide.Selenide.$;
 
 public class CalendarComponent {
