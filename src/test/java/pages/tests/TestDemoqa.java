@@ -45,11 +45,11 @@ import static com.codeborne.selenide.Selenide.*;
                     .checkResult1("Student Email", "alex@egorov.com")
                     .checkResult1("Gender", "Female")
                     .checkResult1("Mobile", "754237867831")
-                    .checkResult1("Date of Birth", "30", "September", "1973")
+                    .checkResult1("Date of Birth"," 30 September 1973")
                     .checkResult1("Subjects", "English")
-                    .checkResult1("Hobbies")
+                    .checkResult1("Hobbies","English")
                     .checkResult1("Picture", "scrin.png")
-                    .checkResult1("Address,g.Maxachkola ul. rambler d.11. kv.14")
+                    .checkResult1("Address","g.Maxachkola ul. rambler d.11. kv.14")
                     .checkResult1("State and City", "NCR Delhi");
 
 
