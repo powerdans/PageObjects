@@ -6,10 +6,14 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
+
 public class TestDemoqaPage {
     CalendarComponent calendarComponent = new CalendarComponent();
 
-
+    public TestDemoqaPage openPage() {
+        open("/automation-practice-form");
+        return this;
+    }
     private SelenideElement firstNameInput = $("#firstName"),
             firstNameLocator = $("#firstName"),
             lastNameLocator = $("#lastName"),
