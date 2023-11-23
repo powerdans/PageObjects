@@ -1,7 +1,7 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
-import pages.components.TestDemoqaPage;
+import pages.TestDemoqaPage;
 import pages.components.ResultModal;
 
 
