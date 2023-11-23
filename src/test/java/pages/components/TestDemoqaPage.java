@@ -2,6 +2,7 @@ package pages.components;
 
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -27,7 +28,8 @@ public class TestDemoqaPage {
             stateLocator = $("#state input"),
             cityLocator = $("#city input"),
             submitLocator = $("#submit"),
-            calendarInput = $("#dateOfBirthInput");
+            calendarInput = $("#dateOfBirthInput"),
+            checkTable = $(".table-responsive");
 
     public TestDemoqaPage setFirstName(String value){
         firstNameLocator.setValue(value);
@@ -48,8 +50,7 @@ public class TestDemoqaPage {
     }
 
     public TestDemoqaPage setSubject(String value){
-        subjectLocator.click();
-        subjectLocator.setValue(value).pressEnter();
+        subjectLocator.val(value).pressEnter();
         return this;
     }
 
@@ -66,7 +67,7 @@ public class TestDemoqaPage {
 
     public TestDemoqaPage setDateOfBirth(String day, String month, String year) {
         calendarInput.click();
-        calendarComponent.setDate(day, month, year);
+        calendarComponent.setDate1(day, month, year);
 
         return this;
     }
@@ -92,8 +93,12 @@ public class TestDemoqaPage {
     }
 
     public TestDemoqaPage pressSubmit(){
-        submitLocator.click();
+        submitLocator.pressEnter();
         return this;
+    }
+    public void tableHidden() {
+        checkTable.shouldBe(hidden);
+
     }
 }
 
