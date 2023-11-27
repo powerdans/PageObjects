@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-
+import pages.components.CalendarComponent;
 
 
 public class TestDemoqaPage {
@@ -67,7 +67,7 @@ public class TestDemoqaPage {
 
     public TestDemoqaPage setDateOfBirth(String day, String month, String year) {
         calendarInput.click();
-        calendarComponent.setDate1(day, month, year);
+        calendarComponent.setDate1(year, month, day);
 
         return this;
     }

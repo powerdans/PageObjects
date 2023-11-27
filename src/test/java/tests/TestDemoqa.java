@@ -5,11 +5,14 @@ import pages.TestDemoqaPage;
 import pages.components.ResultModal;
 
 
+
+
+
 import static com.codeborne.selenide.Selenide.*;
 
 
 
-    public class TestDemoqa extends TestBase {
+public class TestDemoqa extends TestBase {
 
 
         TestDemoqaPage registrationPage = new TestDemoqaPage();
@@ -18,21 +21,21 @@ import static com.codeborne.selenide.Selenide.*;
 
         @Test
         void fillformtest() {
-            open("/automation-practice-form");
-            registrationPage.openPage()
-                    .setFirstName("Alisa")
-                    .setLastName("Igorevna")
-                    .setUserEmail("alex222@egorov.com")
-                    .setUserNumber("7542378678")
-                    .setDateOfBirth("30", "September", "1973")
-                    .setGender("Female")
-                    .uploadPicture("scrin.png")
-                    .setAddress("g.Maxachkola ul. rambler d.11. kv.14")
-                    .setSubject("English")
-                    .setHobbies("Sports")
-                    .setState("NCR")
-                    .setCity("Delhi")
-                    .pressSubmit();
+                open("/automation-practice-form");
+                registrationPage.openPage()
+                        .setFirstName("Alisa")
+                        .setLastName("Igorevna")
+                        .setUserEmail("alex222@egorov.com")
+                        .setUserNumber("7542378678")
+                        .setDateOfBirth("1973", "September", "30")
+                        .setGender("Female")
+                        .uploadPicture("scrin.png")
+                        .setAddress("g.Maxachkola ul. rambler d.11. kv.14")
+                        .setSubject("English")
+                        .setHobbies("Sports")
+                        .setState("NCR")
+                        .setCity("Delhi")
+                        .pressSubmit();
             resultModal1.checkResult1("Student Name", "Alisa Igorevna")
                     .checkResult1("Student Email", "alex222@egorov.com")
                     .checkResult1("Gender", "Female")
@@ -43,7 +46,6 @@ import static com.codeborne.selenide.Selenide.*;
                     .checkResult1("Picture", "scrin.png")
                     .checkResult1("Address","g.Maxachkola ul. rambler d.11. kv.14")
                     .checkResult1("State and City", "NCR Delhi");
-
 
         }
         @Test
