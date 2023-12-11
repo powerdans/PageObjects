@@ -65,9 +65,10 @@ public class TestDemoqaPage {
         return this;
     }
 
-    public TestDemoqaPage setDateOfBirth(String day, String month, String year) {
+    public TestDemoqaPage setDateOfBirth(String year, String month, String day) {
         calendarInput.click();
         calendarComponent.setDate1(year, month, day);
+
 
         return this;
     }

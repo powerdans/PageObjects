@@ -1,11 +1,11 @@
-package tests;
+package utils;
 
 import com.github.javafaker.Faker;
 
 
 
 
-public class TestFaker {
+public class FakerUtils {
     Faker faker = new Faker();
     public String
             firstName = faker.name().firstName(),
@@ -14,7 +14,7 @@ public class TestFaker {
             gender = faker.options().option("Male", "Female", "Other"),
 
             userNumber = faker.phoneNumber().subscriberNumber(10),
-            day = String.valueOf(faker.number().numberBetween(1,28)),
+                    day = String.format("%02d", faker.number().numberBetween(1,28)),
             month = faker.options().option("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"),
             year = String.valueOf(faker.number().numberBetween(1953,2023)),
             subject = faker.options().option("Maths", "History", "English"),

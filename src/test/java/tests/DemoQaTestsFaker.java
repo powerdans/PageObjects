@@ -1,17 +1,16 @@
-package utilis;
+package tests;
 
 
 import pages.TestDemoqaPage;
 import org.junit.jupiter.api.Test;
 import pages.components.ResultModal;
-import tests.TestBase;
-import tests.TestFaker;
+import utils.FakerUtils;
 
 
-public class RandomUtils extends TestBase {
+public class DemoQaTestsFaker extends TestBase {
     TestDemoqaPage registrationPage = new TestDemoqaPage();
     ResultModal resultModal1 = new ResultModal();
-    TestFaker data=new TestFaker();
+    FakerUtils data=new FakerUtils();
     @Test
     void checkFormRegistration() {
         registrationPage.openPage()
